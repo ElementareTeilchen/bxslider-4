@@ -1,23 +1,26 @@
 {
   "name": "bxslider",
   "description": "Touch enabled jQuery plugin for creating responsive carousels and sliders.",
-  "version": "4.2.5",
+  "version": "4.2.6",
   "homepage": "http://bxslider.com",
   "author": {
     "name": "Steven Wanderski",
     "email": "steven@bxcreative.com",
     "url": "http://stevenwanderski.com"
   },
-  "license": {
-    "type": "MIT",
-    "url": "http://opensource.org/licenses/MIT"
-  },
+  "contributors": [
+    {
+      "name": "Raffael Comi",
+      "email": "Raffael.Comi@elementare-teilchen.de"
+    }
+  ],
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/stevenwanderski/bxslider-4/bxslider-4.git"
+    "url": "git@github.com:ElementareTeilchen/et-bxslider.git"
   },
   "bugs": {
-    "url": "https://github.com/stevenwanderski/bxslider-4/issues"
+    "url": "https://github.com/ElementareTeilchen/et-bxslider/issues"
   },
   "devDependencies": {
     "assemble": "~0.4.37",
@@ -46,5 +49,8 @@
     "bxslider",
     "jQuery",
     "plugin"
-  ]
+  ],
+  "config": {
+    "licenseURL": "http://opensource.org/licenses/MIT"
+  }
 }

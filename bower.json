@@ -1,13 +1,11 @@
 {
-  "name": "bxslider-4",
-  "version": "4.2.5",
+  "name": "et-bxslider",
+  "version": "4.2.6",
   "homepage": "http://bxslider.com",
   "license": "MIT",
   "main": [
     "dist/jquery.bxslider.js",
-    "dist/jquery.bxslider.css",
-    "dist/images/bx_loader.gif",
-    "dist/images/controls.png"
+    "dist/jquery.bxslider.css"
   ],
   "ignore": [
     "docs_src/*",
@@ -20,7 +18,7 @@
     "library"
   ],
   "dependencies": {
-    "jquery": ">= 1.8.3"
+    "jquery": "^1.8.3||^2.0||^3.0"
   },
   "devDependencies": {
     "bootstrap": ">= 3.3.2",

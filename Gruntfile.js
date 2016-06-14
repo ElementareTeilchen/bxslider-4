@@ -9,6 +9,12 @@
 module.exports = function(grunt) {
 
   var path = require('path');
+  var banner = '/**\n' + ' * bxSlider v<%= pkg.version %>\n' +
+    ' * Copyright 2013-2015 <%= pkg.author.name %>\n' +
+    ' * Written while drinking Belgian ales and listening to jazz\n\n' +
+    ' * Modified 2016 by <%= pkg.contributors[0].name %>\n\n' +
+    ' * Licensed under <%= pkg.license %> (<%= pkg.config.licenseURL %>)\n' + ' */\n\n'
+  ;
 
   if (!grunt.file.isDir('bower_components')) {
     grunt.fail.fatal('>> Please run "bower install" before continuing.');
@@ -79,7 +85,7 @@ module.exports = function(grunt) {
       // clean
       clean: {
         docs: ['<%= app.docs.dest %>/**/*.*'],
-        dist: ['dist/**/*.*']
+        dist: ['dist/**/*.*', '!dist/README.md']
       },
 
       // less
@@ -131,10 +137,7 @@ module.exports = function(grunt) {
         },
         dist: {
           options: {
-            banner: '/**\n' + ' * bxSlider v<%= pkg.version %>\n' +
-              ' * Copyright 2013-<%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n' +
-              ' * Written while drinking Belgian ales and listening to jazz\n\n' +
-              ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' + ' */\n\n'
+            banner: banner
           },
           files: {
             'dist/jquery.<%= pkg.name %>.css': ['src/css/*.css'],
@@ -145,10 +148,7 @@ module.exports = function(grunt) {
 
       cssmin: {
         options: {
-          banner: '/**\n' + ' * bxSlider v<%= pkg.version %>\n' +
-            ' * Copyright 2013-<%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n' +
-            ' * Written while drinking Belgian ales and listening to jazz\n\n' +
-            ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' + ' */\n\n'
+          banner: banner
         },
         dist: {
           files: {
@@ -182,10 +182,7 @@ module.exports = function(grunt) {
       // uglify
       uglify: {
         options: {
-          banner: '/**\n' + ' * bxSlider v<%= pkg.version %>\n' +
-            ' * Copyright 2013-<%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n' +
-            ' * Written while drinking Belgian ales and listening to jazz\n\n' +
-            ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' + ' */\n\n'
+          banner: banner
         },
         dist: {
           files: {
