@@ -257,11 +257,11 @@
       // if video is true, set up the fitVids plugin
       if (slider.settings.video) { el.fitVids(); }
 	  //preloadImages
-	  if (slider.settings.preloadImages === 'none') { 
-		  preloadSelector = null; 
+	  if (slider.settings.preloadImages === 'none') {
+		  preloadSelector = null;
 	  }
-      else if (slider.settings.preloadImages === 'all' || slider.settings.ticker) { 
-		  preloadSelector = slider.children; 
+      else if (slider.settings.preloadImages === 'all' || slider.settings.ticker) {
+		  preloadSelector = slider.children;
 	  }
       // only check for control addition if not in "ticker" mode
       if (!slider.settings.ticker) {
@@ -562,8 +562,8 @@
       var animateObj, propValue;
       // use CSS transform
       if (slider.usingCSS) {
-        // determine the translate3d value
-        propValue = slider.settings.mode === 'vertical' ? 'translate3d(0, ' + value + 'px, 0)' : 'translate3d(' + value + 'px, 0, 0)';
+        // determine the translate value
+        propValue = slider.settings.mode === 'vertical' ? 'translate(0, ' + value + 'px)' : 'translate(' + value + 'px, 0)';
         // add the CSS transition-duration
         el.css('-' + slider.cssPrefix + '-transition-duration', duration / 1000 + 's');
         if (type === 'slide') {
@@ -1117,11 +1117,11 @@
         slider.touch.originalPos = el.position();
         var orig = e.originalEvent,
         touchPoints = (typeof orig.changedTouches !== 'undefined') ? orig.changedTouches : [orig];
-		var chromePointerEvents = typeof PointerEvent === 'function'; 
-		if (chromePointerEvents) { 
-			if (orig.pointerId === undefined) { 
+		var chromePointerEvents = typeof PointerEvent === 'function';
+		if (chromePointerEvents) {
+			if (orig.pointerId === undefined) {
 				return;
-			} 
+			}
 		}
         // record the starting touch x, y coordinates
         slider.touch.start.x = touchPoints[0].pageX;
